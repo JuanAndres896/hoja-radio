@@ -108,11 +108,13 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(47, 61, 116, 43);
 
+        buttonGroup1.add(jRadioButton1);
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("AM");
         getContentPane().add(jRadioButton1);
         jRadioButton1.setBounds(163, 61, 41, 23);
 
+        buttonGroup1.add(jRadioButton2);
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("FM");
         getContentPane().add(jRadioButton2);
