@@ -13,6 +13,8 @@ public class Main extends javax.swing.JFrame {
     /**
      * Creates new form Main
      */
+    
+    RadioCarro rad = new RadioCarro();
     public Main() {
         initComponents();
     }
@@ -43,7 +45,7 @@ public class Main extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jBpower = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<String>();
         jBguardar = new javax.swing.JButton();
         jBsubirEmisora = new javax.swing.JButton();
         jBbajarEmisora = new javax.swing.JButton();
@@ -56,110 +58,122 @@ public class Main extends javax.swing.JFrame {
 
         jB1.setText("1");
         getContentPane().add(jB1);
-        jB1.setBounds(47, 154, 45, 23);
+        jB1.setBounds(60, 220, 45, 23);
 
         jB4.setText("4");
         getContentPane().add(jB4);
-        jB4.setBounds(47, 183, 45, 23);
+        jB4.setBounds(60, 250, 45, 23);
 
         jB7.setText("7");
         getContentPane().add(jB7);
-        jB7.setBounds(47, 217, 45, 23);
+        jB7.setBounds(60, 280, 45, 23);
 
         jB10.setText("10");
         getContentPane().add(jB10);
-        jB10.setBounds(47, 246, 45, 23);
+        jB10.setBounds(60, 310, 45, 23);
 
         jB2.setText("2");
         getContentPane().add(jB2);
-        jB2.setBounds(110, 154, 45, 23);
+        jB2.setBounds(120, 220, 45, 23);
 
         jB5.setText("5");
         getContentPane().add(jB5);
-        jB5.setBounds(110, 183, 45, 23);
+        jB5.setBounds(120, 250, 45, 23);
 
         jB8.setText("8");
         getContentPane().add(jB8);
-        jB8.setBounds(110, 217, 45, 23);
+        jB8.setBounds(120, 280, 45, 23);
 
         jB11.setText("11");
         getContentPane().add(jB11);
-        jB11.setBounds(110, 246, 45, 23);
+        jB11.setBounds(120, 310, 45, 23);
 
         jB9.setText("9");
         getContentPane().add(jB9);
-        jB9.setBounds(167, 217, 45, 23);
+        jB9.setBounds(180, 280, 45, 23);
 
         jB12.setText("12");
         getContentPane().add(jB12);
-        jB12.setBounds(165, 246, 47, 23);
+        jB12.setBounds(180, 310, 47, 23);
 
         jB3.setText("3");
         getContentPane().add(jB3);
-        jB3.setBounds(167, 154, 45, 23);
+        jB3.setBounds(180, 220, 45, 23);
 
         jB6.setText("6");
         getContentPane().add(jB6);
-        jB6.setBounds(167, 183, 45, 23);
+        jB6.setBounds(180, 250, 45, 23);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("----.---");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(47, 61, 116, 43);
+        jLabel1.setBounds(60, 130, 116, 43);
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("AM");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(163, 61, 41, 23);
+        jRadioButton1.setBounds(170, 140, 41, 23);
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("FM");
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(163, 95, 39, 23);
+        jRadioButton2.setBounds(170, 170, 39, 23);
 
         jBpower.setIcon(new javax.swing.ImageIcon(getClass().getResource("/power1.png"))); // NOI18N
         jBpower.setBorderPainted(false);
         jBpower.setContentAreaFilled(false);
         jBpower.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/power2.png"))); // NOI18N
         getContentPane().add(jBpower);
-        jBpower.setBounds(250, 330, 70, 60);
+        jBpower.setBounds(240, 360, 70, 60);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guardar Emisora.", "1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "11.", "12." }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Guardar Emisora.", "1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "11.", "12." }));
         jComboBox1.setToolTipText("");
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(318, 155, 150, 20);
+        jComboBox1.setBounds(320, 220, 150, 30);
 
         jBguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guardar1.png"))); // NOI18N
         jBguardar.setBorderPainted(false);
         jBguardar.setContentAreaFilled(false);
         jBguardar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/guardar2.png"))); // NOI18N
+        jBguardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBguardarActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBguardar);
-        jBguardar.setBounds(350, 190, 90, 80);
+        jBguardar.setBounds(350, 260, 90, 80);
 
         jBsubirEmisora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/+1.png"))); // NOI18N
         jBsubirEmisora.setBorderPainted(false);
         jBsubirEmisora.setContentAreaFilled(false);
         jBsubirEmisora.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/+2.png"))); // NOI18N
         getContentPane().add(jBsubirEmisora);
-        jBsubirEmisora.setBounds(330, 70, 40, 43);
+        jBsubirEmisora.setBounds(320, 160, 40, 43);
 
         jBbajarEmisora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/-1.png"))); // NOI18N
         jBbajarEmisora.setBorderPainted(false);
         jBbajarEmisora.setContentAreaFilled(false);
         jBbajarEmisora.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/-2.png"))); // NOI18N
         getContentPane().add(jBbajarEmisora);
-        jBbajarEmisora.setBounds(380, 70, 50, 40);
+        jBbajarEmisora.setBounds(400, 160, 50, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo main.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 560, 450);
+        jLabel2.setBounds(0, 0, 520, 430);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBguardarActionPerformed
+        // TODO add your handling code here:
+        int bt = jComboBox1.getSelectedIndex();
+        double emi = rad.estacion[bt];
+        rad.guardarEmisora(bt, emi);
+    }//GEN-LAST:event_jBguardarActionPerformed
 
     /**
      * @param args the command line arguments

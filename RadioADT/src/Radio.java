@@ -26,19 +26,19 @@ public interface Radio {
      * Método para ir cambiando las estaciones
      * @param est double para guardar la elección de la estación
      */
-    public void setEstacion(double est);
+    public void setEstacion(double[] est);
     
     /**
      * Método para guardar una emisora favorita
      * @param em int para alojar la emisora en un botón
      */
-    public void guardarEmisora(int em);
+    public void guardarEmisora(int em, double emi);
     
     /**
      * Método para seleccionar una de las emisoras puesta en el botón
      * @param emi int para identificar la emisora en el botón y seleccionarla
      */
-    public void seleccionarEmisora(int emi);
+    public double seleccionarEmisora(int emi);
     
     /**
      * Método que devuelve el estado de encendido/apagado de la radio
@@ -56,6 +56,6 @@ public interface Radio {
      * Método que devuelve la estación seleccionada
      * @return double de la estación que se escucha 
      */
-    public double getEstacion();   
+    public double[] getEstacion();   
     
 }

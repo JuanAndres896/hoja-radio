@@ -23,7 +23,11 @@ public class RadioCarro implements Radio{
     /** 
      * Atributo para guardar la elección de la estación 
      */
-    public double estacion;
+    public double[] estacion;
+    
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // - - - - - - - - - - - - - - S E T T E R S - - - - - -- - - - - - - - - -
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
     /**
      * Método para para manejar el estado de encendido/apagado de la radio (true/false respectivamente)
@@ -31,7 +35,7 @@ public class RadioCarro implements Radio{
      */
     @Override
     public void setEncendido(boolean estado){
-        
+        this.encendido = estado;
     }
     
     /**
@@ -40,7 +44,7 @@ public class RadioCarro implements Radio{
      */
     @Override
     public void setFrecuencia(boolean frec){
-        
+        this.frecuencia = frec;
     }
     
     /**
@@ -48,27 +52,39 @@ public class RadioCarro implements Radio{
      * @param est double para guardar la elección de la estación
      */
     @Override
-    public void setEstacion(double est){
-        
+    public void setEstacion(double[] est){
+        this.estacion = est;
     }
+    
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // - - - - - - - - - - - - O P E R A T I O N S - - - - - - - - - - - - - - -
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
     /**
      * Método para guardar una emisora favorita
-     * @param em int para alojar la emisora en un botón
+     * @param bt int para identificar el boton donde guardar
+     * @param emi double para identificar a la emisora a guardar
      */
     @Override
-    public void guardarEmisora(int em){
-        
+    public void guardarEmisora(int bt, double emi){
+        bt = bt - 1;
+        this.estacion[bt] = emi;
     }
     
     /**
      * Método para seleccionar una de las emisoras puesta en el botón
-     * @param emi int para identificar la emisora en el botón y seleccionarla
+     * @param bt int para identificar la emisora en el botón y seleccionarla
+     * @return double con la emisora a seleccionar 
      */
     @Override
-    public void seleccionarEmisora(int emi){
-        
+    public double seleccionarEmisora(int bt){
+        bt = bt - 1;
+        return this.estacion[bt];
     }
+    
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // - - - - - - - - - - -  - G E T T E R S - - - - - - - - - - - - - - - - -
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
     /**
      * Método que devuelve el estado de encendido/apagado de la radio
@@ -93,7 +109,7 @@ public class RadioCarro implements Radio{
      * @return double de la estación que se escucha 
      */
     @Override
-    public double getEstacion(){
+    public double[] getEstacion(){
         return estacion;
     }   
     
