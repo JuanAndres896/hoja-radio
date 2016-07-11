@@ -29,12 +29,16 @@ public class RadioCarro implements Radio{
     // - - - - - - - - - - - - - - S E T T E R S - - - - - -- - - - - - - - - -
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
+    public RadioCarro(){
+        estacion= new double[12];
+    }
+
     /**
      * Método para para manejar el estado de encendido/apagado de la radio (true/false respectivamente)
      * @param estado boolean para indicar el estado de encendido/apagado de la radio
      */
     @Override
-    public void setEncendido(boolean estado){
+    public void setEncendido(boolean estado) {
         this.encendido = estado;
     }
     
