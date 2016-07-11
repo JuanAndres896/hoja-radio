@@ -28,6 +28,24 @@ public class Main extends javax.swing.JFrame {
         for(int i = 1; i == 108; i++){
             amE[i] = amE[i-1] + 10;
         }
+        
+        jB1.setEnabled(false);
+        jB2.setEnabled(false);
+        jB3.setEnabled(false);
+        jB4.setEnabled(false);
+        jB5.setEnabled(false);
+        jB6.setEnabled(false);
+        jB7.setEnabled(false);
+        jB8.setEnabled(false);
+        jB9.setEnabled(false);
+        jB10.setEnabled(false);
+        jB11.setEnabled(false);
+        jB12.setEnabled(false);
+        jBbajarEmisora.setEnabled(false);
+        jBguardar.setEnabled(false);
+        jBsubirEmisora.setEnabled(false);
+        jRadioButton1.setEnabled(false);
+        jRadioButton2.setEnabled(false);
     }
 
     /**
@@ -289,9 +307,44 @@ public class Main extends javax.swing.JFrame {
         boolean enc = rad.getEncendido();
         if(enc == true){
             enc = false;
-        }
-        if(enc == false){
+            rad.setEncendido(enc);
+            jB1.setEnabled(enc);
+            jB2.setEnabled(enc);
+            jB3.setEnabled(enc);
+            jB4.setEnabled(enc);
+            jB5.setEnabled(enc);
+            jB6.setEnabled(enc);
+            jB7.setEnabled(enc);
+            jB8.setEnabled(enc);
+            jB9.setEnabled(enc);
+            jB10.setEnabled(enc);
+            jB11.setEnabled(enc);
+            jB12.setEnabled(enc);
+            jBbajarEmisora.setEnabled(enc);
+            jBguardar.setEnabled(enc);
+            jBsubirEmisora.setEnabled(enc);
+            jRadioButton1.setEnabled(enc);
+            jRadioButton2.setEnabled(enc);
+        }else if(enc == false){
             enc = true;
+            rad.setEncendido(enc);
+            jB1.setEnabled(enc);
+            jB2.setEnabled(enc);
+            jB3.setEnabled(enc);
+            jB4.setEnabled(enc);
+            jB5.setEnabled(enc);
+            jB6.setEnabled(enc);
+            jB7.setEnabled(enc);
+            jB8.setEnabled(enc);
+            jB9.setEnabled(enc);
+            jB10.setEnabled(enc);
+            jB11.setEnabled(enc);
+            jB12.setEnabled(enc);
+            jBbajarEmisora.setEnabled(enc);
+            jBguardar.setEnabled(enc);
+            jBsubirEmisora.setEnabled(enc);
+            jRadioButton1.setEnabled(enc);
+            jRadioButton2.setEnabled(enc);
         }
         rad.setEncendido(enc);
         rad.setFrecuencia(true);
