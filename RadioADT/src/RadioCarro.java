@@ -1,3 +1,6 @@
+
+import java.util.Arrays;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -31,6 +34,7 @@ public class RadioCarro implements Radio{
     
     public RadioCarro(){
         estacion= new double[12];
+        Arrays.fill(estacion, 530);
     }
 
     /**
