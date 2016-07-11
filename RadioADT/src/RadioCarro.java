@@ -16,17 +16,17 @@ public class RadioCarro implements Radio{
     /**
      * Atributo para manejar el estado de encendido/apagado de la radio (true/false respectivamente)
      */
-    public boolean encendido;
+    private boolean encendido;
     
     /**
         * Atributo para manejar la elección de frecuencia am/fm (false/true respectivamente)
      */
-    public boolean frecuencia;
+    private boolean frecuencia;
     
     /** 
      * Atributo para guardar la elección de la estación 
      */
-    public double[] estacion;
+    private double[] estacion;
     
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // - - - - - - - - - - - - - - S E T T E R S - - - - - -- - - - - - - - - -

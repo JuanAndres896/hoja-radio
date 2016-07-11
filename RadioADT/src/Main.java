@@ -14,7 +14,7 @@ public class Main extends javax.swing.JFrame {
      * Creates new form Main
      */
     
-    RadioCarro rad = new RadioCarro();
+    Radio rad = new RadioCarro();
     public Main() {
         initComponents();
         rad.setEncendido(false);
