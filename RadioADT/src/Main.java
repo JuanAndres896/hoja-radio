@@ -185,6 +185,11 @@ public class Main extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("AM");
+        jRadioButton1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jRadioButton1StateChanged(evt);
+            }
+        });
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton1ActionPerformed(evt);
@@ -535,6 +540,11 @@ double residuo;
             jRadioButton2.setSelected(true);
         }
     }//GEN-LAST:event_jB12ActionPerformed
+
+    private void jRadioButton1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jRadioButton1StateChanged
+        // TODO add your handling code here:
+        rad.setFrecuencia(!rad.getFrecuencia());
+    }//GEN-LAST:event_jRadioButton1StateChanged
 
     /**
      * @param args the command line arguments
