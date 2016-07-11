@@ -364,7 +364,7 @@ public class Main extends javax.swing.JFrame {
         double  estacion = rad.getEstacion()[0];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10.0%estacion;
-        if(residuo==0){
+        if(residuo==10.0){
             jRadioButton1.setSelected(true);
         
         }
@@ -380,7 +380,7 @@ double residuo;
         double  estacion = rad.getEstacion()[1];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10.0%estacion;
-        if(residuo==0){
+        if(residuo==10.0){
             jRadioButton1.setSelected(true);
         
         }
@@ -394,7 +394,7 @@ double residuo;
         double  estacion = rad.getEstacion()[2];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10.0%estacion;
-        if(residuo==0){
+        if(residuo==10.0){
             jRadioButton1.setSelected(true);
         
         }
@@ -408,7 +408,7 @@ double residuo;
         double  estacion = rad.getEstacion()[3];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10.0%estacion;
-        if(residuo==0){
+        if(residuo==10.0){
             jRadioButton1.setSelected(true);
         
         }
@@ -422,7 +422,7 @@ double residuo;
         double  estacion = rad.getEstacion()[4];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10.0%estacion;
-        if(residuo==0){
+        if(residuo==10.0){
             jRadioButton1.setSelected(true);
         
         }
@@ -437,7 +437,7 @@ double residuo;
         double  estacion = rad.getEstacion()[5];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10.0%estacion;
-        if(residuo==0){
+        if(residuo==10.0){
             jRadioButton1.setSelected(true);
         
         }
@@ -452,7 +452,7 @@ double residuo;
         double  estacion = rad.getEstacion()[6];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10.0%estacion;
-        if(residuo==0){
+        if(residuo==10.0){
             jRadioButton1.setSelected(true);
         
         }
@@ -467,7 +467,7 @@ double residuo;
         double  estacion = rad.getEstacion()[7];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10.0%estacion;
-        if(residuo==0){
+        if(residuo==10.0){
             jRadioButton1.setSelected(true);
         
         }
@@ -482,7 +482,7 @@ double residuo;
         double  estacion = rad.getEstacion()[8];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10.0%estacion;
-        if(residuo==0){
+        if(residuo==10.0){
             jRadioButton1.setSelected(true);
         
         }
@@ -497,7 +497,7 @@ double residuo;
         double  estacion = rad.getEstacion()[9];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10.0%estacion;
-        if(residuo==0){
+        if(residuo==10.0){
             jRadioButton1.setSelected(true);
         
         }
@@ -512,7 +512,7 @@ double residuo;
         double  estacion = rad.getEstacion()[10];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10.0%estacion;
-        if(residuo==0){
+        if(residuo==10.0){
             jRadioButton1.setSelected(true);
         
         }
@@ -527,7 +527,7 @@ double residuo;
         double  estacion = rad.getEstacion()[11];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10.0%estacion;
-        if(residuo==0){
+        if(residuo==10.0){
             jRadioButton1.setSelected(true);
         
         }
