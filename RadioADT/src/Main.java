@@ -17,6 +17,17 @@ public class Main extends javax.swing.JFrame {
     RadioCarro rad = new RadioCarro();
     public Main() {
         initComponents();
+        rad.setEncendido(false);
+        double[] fmE = new double[92];
+        int[] amE = new int[109];
+        fmE[0] = 89.70;
+        for(int i =1; i == 91; i++){
+            fmE[i] = fmE[i-1] + 0.20;
+        }
+        amE[0] = 530;
+        for(int i = 1; i == 108; i++){
+            amE[i] = amE[i-1] + 10;
+        }
     }
 
     /**
@@ -45,10 +56,11 @@ public class Main extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jBpower = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<String>();
         jBguardar = new javax.swing.JButton();
         jBsubirEmisora = new javax.swing.JButton();
         jBbajarEmisora = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -58,51 +70,51 @@ public class Main extends javax.swing.JFrame {
 
         jB1.setText("1");
         getContentPane().add(jB1);
-        jB1.setBounds(60, 220, 45, 25);
+        jB1.setBounds(60, 220, 45, 23);
 
         jB4.setText("4");
         getContentPane().add(jB4);
-        jB4.setBounds(60, 250, 45, 25);
+        jB4.setBounds(60, 250, 45, 23);
 
         jB7.setText("7");
         getContentPane().add(jB7);
-        jB7.setBounds(60, 280, 45, 25);
+        jB7.setBounds(60, 280, 45, 23);
 
         jB10.setText("10");
         getContentPane().add(jB10);
-        jB10.setBounds(60, 310, 47, 25);
+        jB10.setBounds(60, 310, 45, 23);
 
         jB2.setText("2");
         getContentPane().add(jB2);
-        jB2.setBounds(120, 220, 45, 25);
+        jB2.setBounds(120, 220, 45, 23);
 
         jB5.setText("5");
         getContentPane().add(jB5);
-        jB5.setBounds(120, 250, 45, 25);
+        jB5.setBounds(120, 250, 45, 23);
 
         jB8.setText("8");
         getContentPane().add(jB8);
-        jB8.setBounds(120, 280, 45, 25);
+        jB8.setBounds(120, 280, 45, 23);
 
         jB11.setText("11");
         getContentPane().add(jB11);
-        jB11.setBounds(120, 310, 47, 25);
+        jB11.setBounds(120, 310, 45, 23);
 
         jB9.setText("9");
         getContentPane().add(jB9);
-        jB9.setBounds(180, 280, 45, 25);
+        jB9.setBounds(180, 280, 45, 23);
 
         jB12.setText("12");
         getContentPane().add(jB12);
-        jB12.setBounds(180, 310, 47, 25);
+        jB12.setBounds(180, 310, 47, 23);
 
         jB3.setText("3");
         getContentPane().add(jB3);
-        jB3.setBounds(180, 220, 45, 25);
+        jB3.setBounds(180, 220, 45, 23);
 
         jB6.setText("6");
         getContentPane().add(jB6);
-        jB6.setBounds(180, 250, 45, 25);
+        jB6.setBounds(180, 250, 45, 23);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -113,14 +125,24 @@ public class Main extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("AM");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(170, 140, 47, 25);
+        jRadioButton1.setBounds(170, 140, 41, 23);
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("FM");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(170, 170, 45, 25);
+        jRadioButton2.setBounds(170, 170, 39, 23);
 
         jBpower.setIcon(new javax.swing.ImageIcon(getClass().getResource("/power1.png"))); // NOI18N
         jBpower.setBorderPainted(false);
@@ -134,7 +156,7 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(jBpower);
         jBpower.setBounds(240, 360, 70, 60);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guardar Emisora.", "1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "11.", "12." }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Guardar Emisora.", "1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "11.", "12." }));
         jComboBox1.setToolTipText("");
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(320, 220, 150, 30);
@@ -155,6 +177,11 @@ public class Main extends javax.swing.JFrame {
         jBsubirEmisora.setBorderPainted(false);
         jBsubirEmisora.setContentAreaFilled(false);
         jBsubirEmisora.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/+2.png"))); // NOI18N
+        jBsubirEmisora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBsubirEmisoraActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBsubirEmisora);
         jBsubirEmisora.setBounds(320, 160, 40, 43);
 
@@ -162,8 +189,19 @@ public class Main extends javax.swing.JFrame {
         jBbajarEmisora.setBorderPainted(false);
         jBbajarEmisora.setContentAreaFilled(false);
         jBbajarEmisora.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/-2.png"))); // NOI18N
+        jBbajarEmisora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBbajarEmisoraActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBbajarEmisora);
         jBbajarEmisora.setBounds(400, 160, 50, 40);
+
+        jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel3.setText("RADIO");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(220, 50, 90, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondo main.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -183,13 +221,82 @@ public class Main extends javax.swing.JFrame {
     private void jBpowerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBpowerActionPerformed
         // TODO add your handling code here:
         /*Acciones al encender el radio al inicio*/
-        rad.setEncendido(true);
+        boolean enc = rad.getEncendido();
+        if(enc == true){
+            enc = false;
+        }
+        if(enc == false){
+            enc = true;
+        }
+        rad.setEncendido(enc);
         rad.setFrecuencia(true);
-        jLabel1.setText("89.7");
+        jLabel1.setText("89.70");
         jRadioButton2.setSelected(true);
         /*Hacer acciones para apagar el radio*/
         /*Chepe hacete grande*/
     }//GEN-LAST:event_jBpowerActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+        jLabel1.setText("530");
+        rad.setFrecuencia(false);
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+        jLabel1.setText("89.70");
+        rad.setFrecuencia(true);
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jBsubirEmisoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsubirEmisoraActionPerformed
+        // TODO add your handling code here:
+        //SI EL RADIO ES FM
+        if(rad.getFrecuencia()){
+            if(jLabel1.getText().equals("107.9")){
+                jLabel1.setText("89.7");
+            }else{
+                double est = Math.rint( (Double.parseDouble(jLabel1.getText())) *10)/10;
+                est = est + 0.2;
+                String emi = Double.toString(est);
+                jLabel1.setText(emi);
+            }
+        // SI EL RADIO ES AM    
+        }else{
+            if(jLabel1.getText().equals("1610")){
+                jLabel1.setText("530");
+            }else{
+                int est = Integer.parseInt(jLabel1.getText());
+                est = est + 10;
+                String emi = Integer.toString(est);
+                jLabel1.setText(emi);
+            }
+        }
+    }//GEN-LAST:event_jBsubirEmisoraActionPerformed
+
+    private void jBbajarEmisoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBbajarEmisoraActionPerformed
+        // TODO add your handling code here:
+        //SI EL RADIO ES FM
+        if(rad.getFrecuencia()){
+            if(jLabel1.getText().equals("89.7")){
+                jLabel1.setText("107.9");
+            }else{
+                double est = Math.rint( (Double.parseDouble(jLabel1.getText())) *10)/10;
+                est = est - 0.2;
+                String emi = Double.toString(est);
+                jLabel1.setText(emi);
+            }
+        // SI EL RADIO ES AM    
+        }else{
+            if(jLabel1.getText().equals("530")){
+                jLabel1.setText("1610");
+            }else{
+                int est = Integer.parseInt(jLabel1.getText());
+                est = est - 10;
+                String emi = Integer.toString(est);
+                jLabel1.setText(emi);
+            }
+        }
+    }//GEN-LAST:event_jBbajarEmisoraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,6 +354,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     // End of variables declaration//GEN-END:variables
