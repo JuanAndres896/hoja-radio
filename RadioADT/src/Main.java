@@ -367,7 +367,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         double residuo;
         double  estacion = rad.getEstacion()[0];
-        jLabel1.setText(String.valueOf(estacion));
+        jLabel1.setText(String.valueOf((int)estacion));
         residuo = 10.0%estacion;
         if(residuo==10.0){
             jRadioButton1.setSelected(true);
