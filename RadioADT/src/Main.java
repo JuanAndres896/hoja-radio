@@ -75,51 +75,106 @@ public class Main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jB1);
-        jB1.setBounds(60, 220, 45, 25);
+        jB1.setBounds(60, 220, 45, 23);
 
         jB4.setText("4");
+        jB4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB4);
-        jB4.setBounds(60, 250, 45, 25);
+        jB4.setBounds(60, 250, 45, 23);
 
         jB7.setText("7");
+        jB7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB7ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB7);
-        jB7.setBounds(60, 280, 45, 25);
+        jB7.setBounds(60, 280, 45, 23);
 
         jB10.setText("10");
+        jB10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB10ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB10);
-        jB10.setBounds(60, 310, 47, 25);
+        jB10.setBounds(60, 310, 45, 23);
 
         jB2.setText("2");
+        jB2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB2);
-        jB2.setBounds(120, 220, 45, 25);
+        jB2.setBounds(120, 220, 45, 23);
 
         jB5.setText("5");
+        jB5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB5ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB5);
-        jB5.setBounds(120, 250, 45, 25);
+        jB5.setBounds(120, 250, 45, 23);
 
         jB8.setText("8");
+        jB8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB8ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB8);
-        jB8.setBounds(120, 280, 45, 25);
+        jB8.setBounds(120, 280, 45, 23);
 
         jB11.setText("11");
+        jB11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB11ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB11);
-        jB11.setBounds(120, 310, 47, 25);
+        jB11.setBounds(120, 310, 45, 23);
 
         jB9.setText("9");
+        jB9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB9ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB9);
-        jB9.setBounds(180, 280, 45, 25);
+        jB9.setBounds(180, 280, 45, 23);
 
         jB12.setText("12");
+        jB12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB12ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB12);
-        jB12.setBounds(180, 310, 47, 25);
+        jB12.setBounds(180, 310, 47, 23);
 
         jB3.setText("3");
+        jB3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB3);
-        jB3.setBounds(180, 220, 45, 25);
+        jB3.setBounds(180, 220, 45, 23);
 
         jB6.setText("6");
+        jB6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB6ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jB6);
-        jB6.setBounds(180, 250, 45, 25);
+        jB6.setBounds(180, 250, 45, 23);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -136,7 +191,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(170, 140, 47, 25);
+        jRadioButton1.setBounds(170, 140, 41, 23);
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -147,7 +202,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(170, 170, 45, 25);
+        jRadioButton2.setBounds(170, 170, 39, 23);
 
         jBpower.setIcon(new javax.swing.ImageIcon(getClass().getResource("/power1.png"))); // NOI18N
         jBpower.setBorderPainted(false);
@@ -218,7 +273,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jBguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBguardarActionPerformed
         // TODO add your handling code here:
-        int bt = jComboBox1.getSelectedIndex()-1;
+        int bt = jComboBox1.getSelectedIndex();
         double emi = Double.parseDouble(jLabel1.getText());
         rad.guardarEmisora(bt, emi);
     }//GEN-LAST:event_jBguardarActionPerformed
@@ -307,6 +362,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         double residuo;
         double  estacion = rad.getEstacion()[0];
+        jLabel1.setText(String.valueOf(estacion));
         residuo = 10%estacion;
         if(residuo==0){
             jRadioButton1.setSelected(true);
@@ -315,8 +371,170 @@ public class Main extends javax.swing.JFrame {
         else{
             jRadioButton2.setSelected(true);
         }
+        
             
     }//GEN-LAST:event_jB1ActionPerformed
+
+    private void jB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2ActionPerformed
+double residuo;
+        double  estacion = rad.getEstacion()[1];
+        jLabel1.setText(String.valueOf(estacion));
+        residuo = 10%estacion;
+        if(residuo==0){
+            jRadioButton1.setSelected(true);
+        
+        }
+        else{
+            jRadioButton2.setSelected(true);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jB2ActionPerformed
+
+    private void jB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB3ActionPerformed
+double residuo;
+        double  estacion = rad.getEstacion()[2];
+        jLabel1.setText(String.valueOf(estacion));
+        residuo = 10%estacion;
+        if(residuo==0){
+            jRadioButton1.setSelected(true);
+        
+        }
+        else{
+            jRadioButton2.setSelected(true);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jB3ActionPerformed
+
+    private void jB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB4ActionPerformed
+double residuo;
+        double  estacion = rad.getEstacion()[3];
+        jLabel1.setText(String.valueOf(estacion));
+        residuo = 10%estacion;
+        if(residuo==0){
+            jRadioButton1.setSelected(true);
+        
+        }
+        else{
+            jRadioButton2.setSelected(true);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jB4ActionPerformed
+
+    private void jB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB5ActionPerformed
+double residuo;
+        double  estacion = rad.getEstacion()[4];
+        jLabel1.setText(String.valueOf(estacion));
+        residuo = 10%estacion;
+        if(residuo==0){
+            jRadioButton1.setSelected(true);
+        
+        }
+        else{
+            jRadioButton2.setSelected(true);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jB5ActionPerformed
+
+    private void jB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB6ActionPerformed
+        // TODO add your handling code here:
+        double residuo;
+        double  estacion = rad.getEstacion()[5];
+        jLabel1.setText(String.valueOf(estacion));
+        residuo = 10%estacion;
+        if(residuo==0){
+            jRadioButton1.setSelected(true);
+        
+        }
+        else{
+            jRadioButton2.setSelected(true);
+        }
+    }//GEN-LAST:event_jB6ActionPerformed
+
+    private void jB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB7ActionPerformed
+        // TODO add your handling code here:
+        double residuo;
+        double  estacion = rad.getEstacion()[6];
+        jLabel1.setText(String.valueOf(estacion));
+        residuo = 10%estacion;
+        if(residuo==0){
+            jRadioButton1.setSelected(true);
+        
+        }
+        else{
+            jRadioButton2.setSelected(true);
+        }
+    }//GEN-LAST:event_jB7ActionPerformed
+
+    private void jB8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB8ActionPerformed
+        // TODO add your handling code here:
+        double residuo;
+        double  estacion = rad.getEstacion()[7];
+        jLabel1.setText(String.valueOf(estacion));
+        residuo = 10%estacion;
+        if(residuo==0){
+            jRadioButton1.setSelected(true);
+        
+        }
+        else{
+            jRadioButton2.setSelected(true);
+        }
+    }//GEN-LAST:event_jB8ActionPerformed
+
+    private void jB9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB9ActionPerformed
+        // TODO add your handling code here:
+        double residuo;
+        double  estacion = rad.getEstacion()[8];
+        jLabel1.setText(String.valueOf(estacion));
+        residuo = 10%estacion;
+        if(residuo==0){
+            jRadioButton1.setSelected(true);
+        
+        }
+        else{
+            jRadioButton2.setSelected(true);
+        }
+    }//GEN-LAST:event_jB9ActionPerformed
+
+    private void jB10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB10ActionPerformed
+        // TODO add your handling code here:
+        double residuo;
+        double  estacion = rad.getEstacion()[9];
+        jLabel1.setText(String.valueOf(estacion));
+        residuo = 10%estacion;
+        if(residuo==0){
+            jRadioButton1.setSelected(true);
+        
+        }
+        else{
+            jRadioButton2.setSelected(true);
+        }
+    }//GEN-LAST:event_jB10ActionPerformed
+
+    private void jB11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB11ActionPerformed
+            // TODO add your handling code here:
+            double residuo;
+        double  estacion = rad.getEstacion()[10];
+        jLabel1.setText(String.valueOf(estacion));
+        residuo = 10%estacion;
+        if(residuo==0){
+            jRadioButton1.setSelected(true);
+        
+        }
+        else{
+            jRadioButton2.setSelected(true);
+        }
+    }//GEN-LAST:event_jB11ActionPerformed
+
+    private void jB12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB12ActionPerformed
+        // TODO add your handling code here:
+        double residuo;
+        double  estacion = rad.getEstacion()[12];
+        jLabel1.setText(String.valueOf(estacion));
+        residuo = 10%estacion;
+        if(residuo==0){
+            jRadioButton1.setSelected(true);
+        
+        }
+        else{
+            jRadioButton2.setSelected(true);
+        }
+    }//GEN-LAST:event_jB12ActionPerformed
 
     /**
      * @param args the command line arguments
