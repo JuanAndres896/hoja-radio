@@ -365,11 +365,9 @@ public class Main extends javax.swing.JFrame {
 
     private void jB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB1ActionPerformed
         // TODO add your handling code here:
-        double residuo;
-        double  estacion = rad.getEstacion()[0];
         
-        residuo = 10.0%estacion;
-        if(residuo==10.0){
+        double  estacion = rad.getEstacion()[0];
+        if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));
         
