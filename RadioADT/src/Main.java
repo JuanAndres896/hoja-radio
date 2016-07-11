@@ -298,7 +298,6 @@ public class Main extends javax.swing.JFrame {
         jLabel1.setText("89.70");
         jRadioButton2.setSelected(true);
         /*Hacer acciones para apagar el radio*/
-        /*Chepe hacete grande*/
     }//GEN-LAST:event_jBpowerActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
@@ -375,170 +374,158 @@ public class Main extends javax.swing.JFrame {
         else{
             jRadioButton2.setSelected(true);
             jLabel1.setText(String.valueOf(estacion));
-        }
-        
-            
+        }    
     }//GEN-LAST:event_jB1ActionPerformed
 
     private void jB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2ActionPerformed
-double residuo;
+       
         double  estacion = rad.getEstacion()[1];
-        jLabel1.setText(String.valueOf(estacion));
-        residuo = 10.0%estacion;
-        if(residuo==10.0){
+        if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
+            jLabel1.setText(String.valueOf((int)estacion));
         
         }
         else{
             jRadioButton2.setSelected(true);
-        }        // TODO add your handling code here:
+            jLabel1.setText(String.valueOf(estacion));
+        }         // TODO add your handling code here:
     }//GEN-LAST:event_jB2ActionPerformed
 
     private void jB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB3ActionPerformed
-double residuo;
         double  estacion = rad.getEstacion()[2];
-        jLabel1.setText(String.valueOf(estacion));
-        residuo = 10.0%estacion;
-        if(residuo==10.0){
+        if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
+            jLabel1.setText(String.valueOf((int)estacion));
         
         }
         else{
             jRadioButton2.setSelected(true);
-        }        // TODO add your handling code here:
+            jLabel1.setText(String.valueOf(estacion));
+        }          // TODO add your handling code here:
     }//GEN-LAST:event_jB3ActionPerformed
 
     private void jB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB4ActionPerformed
-double residuo;
         double  estacion = rad.getEstacion()[3];
-        jLabel1.setText(String.valueOf(estacion));
-        residuo = 10.0%estacion;
-        if(residuo==10.0){
+        if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
+            jLabel1.setText(String.valueOf((int)estacion));
         
         }
         else{
             jRadioButton2.setSelected(true);
-        }        // TODO add your handling code here:
+            jLabel1.setText(String.valueOf(estacion));
+        }         // TODO add your handling code here:
     }//GEN-LAST:event_jB4ActionPerformed
 
     private void jB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB5ActionPerformed
-double residuo;
         double  estacion = rad.getEstacion()[4];
-        jLabel1.setText(String.valueOf(estacion));
-        residuo = 10.0%estacion;
-        if(residuo==10.0){
+        if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
+            jLabel1.setText(String.valueOf((int)estacion));
         
         }
         else{
             jRadioButton2.setSelected(true);
-        }        // TODO add your handling code here:
+            jLabel1.setText(String.valueOf(estacion));
+        }          // TODO add your handling code here:
     }//GEN-LAST:event_jB5ActionPerformed
 
     private void jB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB6ActionPerformed
         // TODO add your handling code here:
-        double residuo;
         double  estacion = rad.getEstacion()[5];
-        jLabel1.setText(String.valueOf(estacion));
-        residuo = 10.0%estacion;
-        if(residuo==10.0){
+        if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
+            jLabel1.setText(String.valueOf((int)estacion));
         
         }
         else{
             jRadioButton2.setSelected(true);
-        }
+            jLabel1.setText(String.valueOf(estacion));
+        }   
     }//GEN-LAST:event_jB6ActionPerformed
 
     private void jB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB7ActionPerformed
         // TODO add your handling code here:
-        double residuo;
         double  estacion = rad.getEstacion()[6];
-        jLabel1.setText(String.valueOf(estacion));
-        residuo = 10.0%estacion;
-        if(residuo==10.0){
+        if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
+            jLabel1.setText(String.valueOf((int)estacion));
         
         }
         else{
             jRadioButton2.setSelected(true);
-        }
+            jLabel1.setText(String.valueOf(estacion));
+        }   
     }//GEN-LAST:event_jB7ActionPerformed
 
     private void jB8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB8ActionPerformed
         // TODO add your handling code here:
-        double residuo;
         double  estacion = rad.getEstacion()[7];
-        jLabel1.setText(String.valueOf(estacion));
-        residuo = 10.0%estacion;
-        if(residuo==10.0){
+        if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
+            jLabel1.setText(String.valueOf((int)estacion));
         
         }
         else{
             jRadioButton2.setSelected(true);
-        }
+            jLabel1.setText(String.valueOf(estacion));
+        }   
     }//GEN-LAST:event_jB8ActionPerformed
 
     private void jB9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB9ActionPerformed
         // TODO add your handling code here:
-        double residuo;
         double  estacion = rad.getEstacion()[8];
-        jLabel1.setText(String.valueOf(estacion));
-        residuo = 10.0%estacion;
-        if(residuo==10.0){
+        if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
+            jLabel1.setText(String.valueOf((int)estacion));
         
         }
         else{
             jRadioButton2.setSelected(true);
-        }
+            jLabel1.setText(String.valueOf(estacion));
+        }   
     }//GEN-LAST:event_jB9ActionPerformed
 
     private void jB10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB10ActionPerformed
         // TODO add your handling code here:
-        double residuo;
         double  estacion = rad.getEstacion()[9];
-        jLabel1.setText(String.valueOf(estacion));
-        residuo = 10.0%estacion;
-        if(residuo==10.0){
+        if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
+            jLabel1.setText(String.valueOf((int)estacion));
         
         }
         else{
             jRadioButton2.setSelected(true);
-        }
+            jLabel1.setText(String.valueOf(estacion));
+        }   
     }//GEN-LAST:event_jB10ActionPerformed
 
     private void jB11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB11ActionPerformed
             // TODO add your handling code here:
-            double residuo;
         double  estacion = rad.getEstacion()[10];
-        jLabel1.setText(String.valueOf(estacion));
-        residuo = 10.0%estacion;
-        if(residuo==10.0){
+        if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
+            jLabel1.setText(String.valueOf((int)estacion));
         
         }
         else{
             jRadioButton2.setSelected(true);
-        }
+            jLabel1.setText(String.valueOf(estacion));
+        }   
     }//GEN-LAST:event_jB11ActionPerformed
 
     private void jB12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB12ActionPerformed
         // TODO add your handling code here:
-        double residuo;
-        double  estacion = rad.getEstacion()[11];
-        jLabel1.setText(String.valueOf(estacion));
-        residuo = 10.0%estacion;
-        if(residuo==10.0){
+       double  estacion = rad.getEstacion()[11];
+        if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
+            jLabel1.setText(String.valueOf((int)estacion));
         
         }
         else{
             jRadioButton2.setSelected(true);
-        }
+            jLabel1.setText(String.valueOf(estacion));
+        }   
     }//GEN-LAST:event_jB12ActionPerformed
 
     private void jRadioButton1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jRadioButton1StateChanged
