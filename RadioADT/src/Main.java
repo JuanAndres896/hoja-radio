@@ -524,7 +524,7 @@ double residuo;
     private void jB12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB12ActionPerformed
         // TODO add your handling code here:
         double residuo;
-        double  estacion = rad.getEstacion()[12];
+        double  estacion = rad.getEstacion()[11];
         jLabel1.setText(String.valueOf(estacion));
         residuo = 10%estacion;
         if(residuo==0){
