@@ -45,7 +45,7 @@ public class Main extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jBpower = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<String>();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jBguardar = new javax.swing.JButton();
         jBsubirEmisora = new javax.swing.JButton();
         jBbajarEmisora = new javax.swing.JButton();
@@ -58,51 +58,51 @@ public class Main extends javax.swing.JFrame {
 
         jB1.setText("1");
         getContentPane().add(jB1);
-        jB1.setBounds(60, 220, 45, 23);
+        jB1.setBounds(60, 220, 45, 25);
 
         jB4.setText("4");
         getContentPane().add(jB4);
-        jB4.setBounds(60, 250, 45, 23);
+        jB4.setBounds(60, 250, 45, 25);
 
         jB7.setText("7");
         getContentPane().add(jB7);
-        jB7.setBounds(60, 280, 45, 23);
+        jB7.setBounds(60, 280, 45, 25);
 
         jB10.setText("10");
         getContentPane().add(jB10);
-        jB10.setBounds(60, 310, 45, 23);
+        jB10.setBounds(60, 310, 47, 25);
 
         jB2.setText("2");
         getContentPane().add(jB2);
-        jB2.setBounds(120, 220, 45, 23);
+        jB2.setBounds(120, 220, 45, 25);
 
         jB5.setText("5");
         getContentPane().add(jB5);
-        jB5.setBounds(120, 250, 45, 23);
+        jB5.setBounds(120, 250, 45, 25);
 
         jB8.setText("8");
         getContentPane().add(jB8);
-        jB8.setBounds(120, 280, 45, 23);
+        jB8.setBounds(120, 280, 45, 25);
 
         jB11.setText("11");
         getContentPane().add(jB11);
-        jB11.setBounds(120, 310, 45, 23);
+        jB11.setBounds(120, 310, 47, 25);
 
         jB9.setText("9");
         getContentPane().add(jB9);
-        jB9.setBounds(180, 280, 45, 23);
+        jB9.setBounds(180, 280, 45, 25);
 
         jB12.setText("12");
         getContentPane().add(jB12);
-        jB12.setBounds(180, 310, 47, 23);
+        jB12.setBounds(180, 310, 47, 25);
 
         jB3.setText("3");
         getContentPane().add(jB3);
-        jB3.setBounds(180, 220, 45, 23);
+        jB3.setBounds(180, 220, 45, 25);
 
         jB6.setText("6");
         getContentPane().add(jB6);
-        jB6.setBounds(180, 250, 45, 23);
+        jB6.setBounds(180, 250, 45, 25);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -114,22 +114,27 @@ public class Main extends javax.swing.JFrame {
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("AM");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(170, 140, 41, 23);
+        jRadioButton1.setBounds(170, 140, 47, 25);
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("FM");
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(170, 170, 39, 23);
+        jRadioButton2.setBounds(170, 170, 45, 25);
 
         jBpower.setIcon(new javax.swing.ImageIcon(getClass().getResource("/power1.png"))); // NOI18N
         jBpower.setBorderPainted(false);
         jBpower.setContentAreaFilled(false);
         jBpower.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/power2.png"))); // NOI18N
+        jBpower.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBpowerActionPerformed(evt);
+            }
+        });
         getContentPane().add(jBpower);
         jBpower.setBounds(240, 360, 70, 60);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Guardar Emisora.", "1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "11.", "12." }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guardar Emisora.", "1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "11.", "12." }));
         jComboBox1.setToolTipText("");
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(320, 220, 150, 30);
@@ -174,6 +179,17 @@ public class Main extends javax.swing.JFrame {
         double emi = rad.estacion[bt];
         rad.guardarEmisora(bt, emi);
     }//GEN-LAST:event_jBguardarActionPerformed
+
+    private void jBpowerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBpowerActionPerformed
+        // TODO add your handling code here:
+        /*Acciones al encender el radio al inicio*/
+        rad.setEncendido(true);
+        rad.setFrecuencia(true);
+        jLabel1.setText("89.7");
+        jRadioButton2.setSelected(true);
+        /*Hacer acciones para apagar el radio*/
+        /*Chepe hacete grande*/
+    }//GEN-LAST:event_jBpowerActionPerformed
 
     /**
      * @param args the command line arguments
