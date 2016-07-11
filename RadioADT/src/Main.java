@@ -213,8 +213,8 @@ public class Main extends javax.swing.JFrame {
 
     private void jBguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBguardarActionPerformed
         // TODO add your handling code here:
-        int bt = jComboBox1.getSelectedIndex();
-        double emi = rad.estacion[bt];
+        int bt = jComboBox1.getSelectedIndex()-1;
+        double emi = Double.parseDouble(jLabel1.getText());
         rad.guardarEmisora(bt, emi);
     }//GEN-LAST:event_jBguardarActionPerformed
 
