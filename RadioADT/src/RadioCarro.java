@@ -8,8 +8,12 @@ import java.util.Arrays;
  */
 
 /**
- *
- * @author Christian Morales
+ * Universidad del Valle de Guatemala
+ * @author Christian Morales, Jose Luis Méndez, Juan García
+ * Carne: 15015, 15021, 15046
+ * 13 de Julio del 2016
+ * Descripción: Esta es la clase que implenta la interfaz, la cual es el objeto que se va a utilizar para darle vida al Radio. 
+ * Esta es una de las clases que se van a cambiar entre las hojas de trabajo. Debería ser muy similar a las otras. 
  */
 public class RadioCarro implements Radio{
     
@@ -26,15 +30,16 @@ public class RadioCarro implements Radio{
     /** 
      * Atributo para guardar la elección de la estación 
      */
-    private double[] estacion;
+    private double estacion;
+    
+    private double[] emisoras;
     
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // - - - - - - - - - - - - - - S E T T E R S - - - - - -- - - - - - - - - -
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
     public RadioCarro(){
-        estacion= new double[12];
-        Arrays.fill(estacion, 530);
+        
     }
 
     /**
@@ -60,7 +65,7 @@ public class RadioCarro implements Radio{
      * @param est double para guardar la elección de la estación
      */
     @Override
-    public void setEstacion(double[] est){
+    public void setEmisora(double est){
         this.estacion = est;
     }
     
@@ -74,7 +79,7 @@ public class RadioCarro implements Radio{
      * @param emi double para identificar a la emisora a guardar
      */
     @Override
-    public void guardarEmisora(int bt, double emi){
+    public void saveEmisora(int bt, double emi){
         bt = bt - 1;
         this.estacion[bt] = emi;
     }
@@ -85,7 +90,7 @@ public class RadioCarro implements Radio{
      * @return double con la emisora a seleccionar 
      */
     @Override
-    public double seleccionarEmisora(int bt){
+    public double selectEmisora(int bt){
         bt = bt - 1;
         return this.estacion[bt];
     }
@@ -117,7 +122,7 @@ public class RadioCarro implements Radio{
      * @return double de la estación que se escucha 
      */
     @Override
-    public double[] getEstacion(){
+    public double getEmisora(){
         return estacion;
     }   
     

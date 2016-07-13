@@ -4,8 +4,16 @@
  * and open the template in the editor.
  */
 
+/* Universidad del Valle de Guatemala
+ * @author Christian Morales, Jose Luis Méndez, Juan García
+ * Carne: 15015, 15021, 15046
+ * 13 de Julio del 2016
+ * Descripción: En esta clase se realizan las pruebas unitarias
+ */
+
 import java.util.Arrays;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -57,12 +65,11 @@ public class RadioCarroTest {
      * Test of setEstacion method, of class RadioCarro.
      */
     @Test
-    public void testSetEstacion() {
+    public void testSetEmisora() {
         System.out.println("setEstacion");
-        double[] est = new double[1];
-        est[0]=530;
+        double est = 530;
         RadioCarro instance = new RadioCarro();
-        instance.setEstacion(est);
+        instance.setEmisora(est);
         // TODO review the generated test code and remove the default call to fail.
         
     }
@@ -71,12 +78,12 @@ public class RadioCarroTest {
      * Test of guardarEmisora method, of class RadioCarro.
      */
     @Test
-    public void testGuardarEmisora() {
+    public void testSaveEmisora() {
         System.out.println("guardarEmisora");
         int bt =1 ;
         double emi = 90.5;
         RadioCarro instance = new RadioCarro();
-        instance.guardarEmisora(bt, emi);
+        instance.saveEmisora(bt, emi);
         // TODO review the generated test code and remove the default call to fail.
        
     }
@@ -90,7 +97,7 @@ public class RadioCarroTest {
         int bt = 1;
         RadioCarro instance = new RadioCarro();
         double expResult = 530;
-        double result = instance.seleccionarEmisora(bt);
+        double result = instance.selectEmisora(bt);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
        
@@ -129,14 +136,13 @@ public class RadioCarroTest {
      * 
      * Esta prueba tenia fallos... no identifica si un array es igual al otro
      */
-   /* @Test
+   @Test
     public void testGetEstacion() {
         System.out.println("getEstacion");
         RadioCarro instance = new RadioCarro();
-        double[] expResult = new double[12];
-        Arrays.fill(expResult,530.0);
-        double[] result = instance.getEstacion();
-        assertArrayEquals(result, result);
+        double expResult = 2.0;
+        double result = instance.getEmisora();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        
     }
@@ -144,5 +150,5 @@ public class RadioCarroTest {
     private void assertArrayEquals(double[] expResult, double[] result) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    */
+    
 }

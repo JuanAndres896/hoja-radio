@@ -5,19 +5,26 @@
  */
 
 /**
- *
- * @author jose luis
+ * Universidad del Valle de Guatemala
+ * @author Christian Morales, Jose Luis Méndez, Juan García
+ * Carne: 15015, 15021, 15046
+ * 13 de Julio del 2016
+ * Descripción: Este es el GUI, que utiliza la clase RadioCarro, se presenta la interfaz gráfica y se cumplen los requisitos de la GDT.
+ *  Esta tambié será intercambiada con los comprañeros.
  */
 public class Main extends javax.swing.JFrame {
 
     /**
      * Creates new form Main
+     * Se crea el objeto Rad que implementa la estructura A objeto = new B()
      */
     
     Radio rad = new RadioCarro();
     public Main() {
         initComponents();
+        // Se le da una valor de "false" al encendido para que el radio inicie como apagado
         rad.setEncendido(false);        
+        // Se inician todos los componentes como no habilitados, para que no puedan usarse estando apagado el radio
         jB1.setEnabled(false);
         jB2.setEnabled(false);
         jB3.setEnabled(false);
@@ -283,13 +290,15 @@ public class Main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Este método guarda una emisora en un botón
     private void jBguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBguardarActionPerformed
         // TODO add your handling code here:
         int bt = jComboBox1.getSelectedIndex();
         double emi = Double.parseDouble(jLabel1.getText());
-        rad.guardarEmisora(bt, emi);
+        rad.saveEmisora(bt, emi);
     }//GEN-LAST:event_jBguardarActionPerformed
 
+    // Este boton se encarga del encendido y apagado del radio y su inicialización
     private void jBpowerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBpowerActionPerformed
         // TODO add your handling code here:
         /*Acciones al encender el radio al inicio*/
@@ -342,6 +351,7 @@ public class Main extends javax.swing.JFrame {
         /*Hacer acciones para apagar el radio*/
     }//GEN-LAST:event_jBpowerActionPerformed
 
+    // Estos radioButton siven para seleccionar la frecuencia AM o FM
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
         jLabel1.setText("530");
@@ -354,6 +364,8 @@ public class Main extends javax.swing.JFrame {
         rad.setFrecuencia(true);
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
+    
+    //Estos botones se encargan de ir avanzando hacia adelante o hacia atrás en las emisoras, dependiendo de la frecuencia (AM o FM)
     private void jBsubirEmisoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsubirEmisoraActionPerformed
         // TODO add your handling code here:
         //SI EL RADIO ES FM
@@ -404,10 +416,12 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jBbajarEmisoraActionPerformed
 
+    
+    // Se presentan los botones que tendrán guardadas las emisoras
     private void jB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB1ActionPerformed
         // TODO add your handling code here:
         
-        double  estacion = rad.getEstacion()[0];
+        double  estacion = rad.getEmisora();
         if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));
@@ -421,7 +435,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2ActionPerformed
        
-        double  estacion = rad.getEstacion()[1];
+        double  estacion = rad.getEmisora();
         if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));
@@ -434,7 +448,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jB2ActionPerformed
 
     private void jB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB3ActionPerformed
-        double  estacion = rad.getEstacion()[2];
+        double  estacion = rad.getEmisora();
         if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));
@@ -447,7 +461,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jB3ActionPerformed
 
     private void jB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB4ActionPerformed
-        double  estacion = rad.getEstacion()[3];
+        double  estacion = rad.getEmisora();
         if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));
@@ -460,7 +474,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jB4ActionPerformed
 
     private void jB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB5ActionPerformed
-        double  estacion = rad.getEstacion()[4];
+        double  estacion = rad.getEmisora();
         if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));
@@ -474,7 +488,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB6ActionPerformed
         // TODO add your handling code here:
-        double  estacion = rad.getEstacion()[5];
+        double  estacion = rad.getEmisora();
         if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));
@@ -488,7 +502,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB7ActionPerformed
         // TODO add your handling code here:
-        double  estacion = rad.getEstacion()[6];
+        double  estacion = rad.getEmisora();
         if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));
@@ -502,7 +516,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jB8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB8ActionPerformed
         // TODO add your handling code here:
-        double  estacion = rad.getEstacion()[7];
+        double  estacion = rad.getEmisora();
         if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));
@@ -516,7 +530,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jB9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB9ActionPerformed
         // TODO add your handling code here:
-        double  estacion = rad.getEstacion()[8];
+        double  estacion = rad.getEmisora();
         if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));
@@ -530,7 +544,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jB10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB10ActionPerformed
         // TODO add your handling code here:
-        double  estacion = rad.getEstacion()[9];
+        double  estacion = rad.getEmisora();
         if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));
@@ -544,7 +558,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jB11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB11ActionPerformed
             // TODO add your handling code here:
-        double  estacion = rad.getEstacion()[10];
+        double  estacion = rad.getEmisora();
         if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));
@@ -558,7 +572,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jB12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB12ActionPerformed
         // TODO add your handling code here:
-       double  estacion = rad.getEstacion()[11];
+       double  estacion = rad.getEmisora();
         if(estacion== (int)estacion){
             jRadioButton1.setSelected(true);
             jLabel1.setText(String.valueOf((int)estacion));

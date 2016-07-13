@@ -5,8 +5,11 @@
  */
 
 /**
- *
- * @author Christian Morales
+ * Universidad del Valle de Guatemala
+ * @author Christian Morales, Jose Luis Méndez, Juan García
+ * Carne: 15015, 15021, 15046
+ * 13 de Julio del 2016
+ * Descripción: Se presenta la clase interfaz que proporcionará el contrato a utilizar, ésta debe ser la misma en todas las hojas de trtabajo
  */
 public interface Radio {
     
@@ -26,19 +29,19 @@ public interface Radio {
      * Método para ir cambiando las estaciones
      * @param est double para guardar la elección de la estación
      */
-    public void setEstacion(double[] est);
+    public void setEmisora(double est);
     
     /**
      * Método para guardar una emisora favorita
      * @param em int para alojar la emisora en un botón
      */
-    public void guardarEmisora(int em, double emi);
+    public void saveEmisora(int em, double emi);
     
     /**
      * Método para seleccionar una de las emisoras puesta en el botón
      * @param emi int para identificar la emisora en el botón y seleccionarla
      */
-    public double seleccionarEmisora(int emi);
+    public double selectEmisora(int emi);
     
     /**
      * Método que devuelve el estado de encendido/apagado de la radio
@@ -56,6 +59,6 @@ public interface Radio {
      * Método que devuelve la estación seleccionada
      * @return double de la estación que se escucha 
      */
-    public double[] getEstacion();   
+    public double getEmisora();   
     
 }
