@@ -17,18 +17,7 @@ public class Main extends javax.swing.JFrame {
     Radio rad = new RadioCarro();
     public Main() {
         initComponents();
-        rad.setEncendido(false);
-        double[] fmE = new double[92];
-        int[] amE = new int[109];
-        fmE[0] = 89.70;
-        for(int i =1; i == 91; i++){
-            fmE[i] = fmE[i-1] + 0.20;
-        }
-        amE[0] = 530;
-        for(int i = 1; i == 108; i++){
-            amE[i] = amE[i-1] + 10;
-        }
-        
+        rad.setEncendido(false);        
         jB1.setEnabled(false);
         jB2.setEnabled(false);
         jB3.setEnabled(false);
