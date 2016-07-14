@@ -1,6 +1,8 @@
 
 import java.util.Arrays;
 
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -39,6 +41,10 @@ public class RadioCarro implements Radio{
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
     public RadioCarro(){
+        emisoras=new double[12];
+        Arrays.fill(emisoras,530);
+        frecuencia=true;
+        
         
     }
 
@@ -52,21 +58,21 @@ public class RadioCarro implements Radio{
     }
     
     /**
-     * Método para manejar la elección de frecuencia am/fm (false/true respectivamente)
-     * @param frec boolean para indicar la elección de frecuencia am/fm 
+     * Método para manejar la elección de frecuencia am/fm (false/true respectivamente) 
+     * @param frecuencia
      */
     @Override
-    public void setFrecuencia(boolean frec){
-        this.frecuencia = frec;
+    public void setFrecuencia(boolean frecuencia){
+        this.frecuencia = frecuencia;
     }
     
     /**
      * Método para ir cambiando las estaciones
-     * @param est double para guardar la elección de la estación
+     * @param emisora
      */
     @Override
-    public void setEmisora(double est){
-        this.estacion = est;
+    public void setEmisora(double emisora){
+        this.estacion = emisora;
     }
     
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -75,24 +81,26 @@ public class RadioCarro implements Radio{
     
     /**
      * Método para guardar una emisora favorita
-     * @param bt int para identificar el boton donde guardar
-     * @param emi double para identificar a la emisora a guardar
+     * @param registro
+     * @param emisora
      */
     @Override
-    public void saveEmisora(int bt, double emi){
-        bt = bt - 1;
-        this.estacion[bt] = emi;
+    public void saveEmisora(int registro, double emisora){
+        registro = registro;
+        this.emisoras[registro] = emisora;
     }
     
     /**
      * Método para seleccionar una de las emisoras puesta en el botón
-     * @param bt int para identificar la emisora en el botón y seleccionarla
+     * @param registro
      * @return double con la emisora a seleccionar 
      */
     @Override
-    public double selectEmisora(int bt){
-        bt = bt - 1;
-        return this.estacion[bt];
+    public double selectEmisora(int registro){
+        registro = registro;
+        double emisora;
+        emisora=this.emisoras[registro];
+        return emisora;
     }
     
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -115,6 +123,8 @@ public class RadioCarro implements Radio{
     @Override
     public boolean getFrecuencia(){
         return frecuencia;
+      
+        
     }
     
     /**

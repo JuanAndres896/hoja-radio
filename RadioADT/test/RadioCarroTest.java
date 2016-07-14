@@ -12,11 +12,13 @@
  */
 
 import java.util.Arrays;
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
@@ -33,6 +35,14 @@ public class RadioCarroTest {
     
     @AfterClass
     public static void tearDownClass() {
+    }
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
     }
 
     /**
@@ -149,6 +159,35 @@ public class RadioCarroTest {
 
     private void assertArrayEquals(double[] expResult, double[] result) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    /**
+     * Test of selectEmisora method, of class RadioCarro.
+     */
+    @Test
+    public void testSelectEmisora() {
+        System.out.println("selectEmisora");
+        int registro = 0;
+        RadioCarro instance = new RadioCarro();
+        double expResult = 0.0;
+        double result = instance.selectEmisora(registro);
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getEmisora method, of class RadioCarro.
+     */
+    @Test
+    public void testGetEmisora() {
+        System.out.println("getEmisora");
+        RadioCarro instance = new RadioCarro();
+        double expResult = 0.0;
+        double result = instance.getEmisora();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }
