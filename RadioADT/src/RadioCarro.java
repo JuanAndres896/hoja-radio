@@ -34,7 +34,7 @@ public class RadioCarro implements Radio{
      */
     private double estacion;
     
-    private double[] emisoras;
+    private final double[] emisoras;
     
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // - - - - - - - - - - - - - - S E T T E R S - - - - - -- - - - - - - - - -
@@ -44,8 +44,6 @@ public class RadioCarro implements Radio{
         emisoras=new double[12];
         Arrays.fill(emisoras,530);
         frecuencia=true;
-        
-        
     }
 
     /**
@@ -86,7 +84,6 @@ public class RadioCarro implements Radio{
      */
     @Override
     public void saveEmisora(int registro, double emisora){
-        registro = registro;
         this.emisoras[registro] = emisora;
     }
     
@@ -97,7 +94,6 @@ public class RadioCarro implements Radio{
      */
     @Override
     public double selectEmisora(int registro){
-        registro = registro;
         double emisora;
         emisora=this.emisoras[registro];
         return emisora;

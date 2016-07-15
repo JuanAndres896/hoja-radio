@@ -70,7 +70,7 @@ public class Main extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jBpower = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<String>();
         jBguardar = new javax.swing.JButton();
         jBsubirEmisora = new javax.swing.JButton();
         jBbajarEmisora = new javax.swing.JButton();
@@ -235,7 +235,7 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(jBpower);
         jBpower.setBounds(240, 360, 70, 60);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guardar Emisora.", "1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "11.", "12." }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Guardar Emisora.", "1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "11.", "12." }));
         jComboBox1.setToolTipText("");
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(320, 220, 150, 30);
