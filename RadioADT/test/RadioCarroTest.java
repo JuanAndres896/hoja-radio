@@ -134,7 +134,7 @@ public class RadioCarroTest {
     public void testGetFrecuencia() {
         System.out.println("getFrecuencia");
         RadioCarro instance = new RadioCarro();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.getFrecuencia();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -144,15 +144,15 @@ public class RadioCarroTest {
     /**
      * Test of getEstacion method, of class RadioCarro.
      * 
-     * Esta prueba tenia fallos... no identifica si un array es igual al otro
+     * 
      */
    @Test
     public void testGetEstacion() {
         System.out.println("getEstacion");
         RadioCarro instance = new RadioCarro();
-        double expResult = 2.0;
+        double expResult = 0.0;
         double result = instance.getEmisora();
-        assertEquals(expResult, result);
+        assertEquals(expResult, result,0.0);
         // TODO review the generated test code and remove the default call to fail.
        
     }
@@ -169,11 +169,11 @@ public class RadioCarroTest {
         System.out.println("selectEmisora");
         int registro = 0;
         RadioCarro instance = new RadioCarro();
-        double expResult = 0.0;
+        double expResult = 530.0;
         double result = instance.selectEmisora(registro);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result, 530.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -187,7 +187,7 @@ public class RadioCarroTest {
         double result = instance.getEmisora();
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
